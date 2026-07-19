@@ -50,8 +50,10 @@ Google, not by us, and is governed by Google's own policies:
 - How Google uses information from partner sites and apps —
   https://policies.google.com/technologies/partner-sites
 
-Where required by law, an ad consent prompt is shown before personalised ads
-are served, and your choice is respected on subsequent launches.
+Ads served in the Game may be personalised, based on data Google associates
+with your advertising identifier. You can turn personalisation off at any time
+using the system-wide control described below; doing so does not remove ads,
+but makes them non-personalised.
 
 **Turning ads off:** the Game offers a one-time "Remove ads" purchase. Once
 active, no ads are requested or displayed, and the ad SDK stops making
@@ -76,14 +78,17 @@ https://policies.google.com/privacy.
 
 ## 5. Children's privacy
 
-The Game is rated for general audiences (ESRB Everyone, PEGI 3, USK All ages)
-and contains no violence, no gambling, no chat and no user-generated content.
+The Game's content is rated for general audiences (ESRB Everyone, PEGI 3, USK
+All ages) and contains no violence, no gambling, no chat and no user-generated
+content. Its **target audience is users aged 13 and over**, as declared in the
+Google Play Console. It is not part of the Designed for Families programme and
+is not directed at children.
 
-We do not knowingly collect personal information from anyone, including
-children under 13. If the Game is distributed to an audience that includes
-children, ads are configured to be served in compliance with Google Play's
-Families policy and applicable law (including COPPA and GDPR), which restricts
-them to non-personalised, age-appropriate content.
+We do not knowingly collect personal information from anyone, and we collect
+none at all — see section 1. If you believe a child has provided personal
+information to Google through the advertising services described in section 3,
+please use Google's controls linked there, or contact us and we will help where
+we can.
 
 ## 6. Data sharing and selling
 
