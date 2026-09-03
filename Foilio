@@ -1,0 +1,210 @@
+# Foilio — Privacy Policy
+
+**Last updated: 3 September 2026**
+**Applies to: Foilio for Android (`com.leoseverini.foilio`)**
+
+Foilio is a catalogue for a Magic: The Gathering collection. It runs on your
+phone, stores your collection on your phone, and works with the network turned
+off.
+
+This policy says what leaves the device, what does not, and who else is
+involved. It is written to be read, not to be survived.
+
+---
+
+## The short version
+
+- **Foilio has no account and no server.** There is nothing to sign up for, and
+  no copy of your collection anywhere but your own device and any backup you
+  export yourself.
+- **Your collection never leaves the device** unless you export a backup and
+  choose where to send it.
+- **Photos from the camera are never uploaded.** Card recognition happens
+  entirely on the phone, against a card database that ships inside the app.
+  Frames are held in memory for a fraction of a second and then discarded.
+- **The free version shows ads,** which are served by Google AdMob. AdMob
+  collects data — this is the one part of the app that does. What it collects
+  is set out below.
+- **Foilio Pro removes the ads,** and with them every ad-related data flow. It
+  is a one-time purchase handled by Google Play.
+
+---
+
+## What Foilio stores on your device
+
+All of it stays on the device, in the app's own private storage.
+
+| What | Where | Why |
+|---|---|---|
+| Your containers, cards, quantities, conditions, tags, notes, decks, pull records, audits and wishlist | `user.sqlite` | This is your collection. It is the app. |
+| The card database — names, sets, prices, art hashes, image URLs | `cards.sqlite` | So search and the scanner work offline. Shipped with the app; identical for every user. |
+| Your settings, the day's scan count, and whether you own Foilio Pro | Android's preference store | Small values. The scan count resets every day and is not included in a backup. |
+
+Nothing in this list is transmitted anywhere by Foilio. Uninstalling the app
+deletes all of it — Android removes an app's private storage with the app, so
+**export a backup first if you want to keep your collection.**
+
+## What Foilio does not collect
+
+To be explicit, because "we take your privacy seriously" is not information:
+
+- No account, email address, name or phone number. You are never asked.
+- No analytics, telemetry, crash reporting or usage statistics. There is no
+  code in the app that reports how you use it, because there is nowhere for it
+  to report to.
+- No contacts, location, calendar, files, microphone or call data.
+- No advertising profile built by us. We never see AdMob's data; Google serves
+  the ads and reports us a number.
+
+## Permissions, and what each is for
+
+| Permission | What it is for |
+|---|---|
+| `CAMERA` | Recognising a card you hold up. Frames are processed on the device and discarded; nothing is written to storage or uploaded. Declining it leaves every other part of the app working. |
+| `INTERNET` | Three things: loading card images from Scryfall while you browse, checking whether a newer card database has been published, and requesting ads. With no network the app still opens, searches, scans and files cards. |
+| `VIBRATE` | The confirmation tap when a card is recognised. |
+| `AD_ID` (`com.google.android.gms.permission.AD_ID`) | Lets AdMob read the device's advertising ID. Present because the app serves ads. |
+
+There is no storage permission: backups are handed to Android's own share sheet
+and imports come through Android's file picker, so Foilio only ever sees the
+one file you pick.
+
+## When Foilio contacts the network, and who it reaches
+
+Four occasions, and no others.
+
+**1. Card images, from Scryfall.** When you browse cards, thumbnails are loaded
+from `scryfall.com`. Scryfall receives the request — which means your IP address
+and which card image you asked for — and their privacy policy applies to it.
+Foilio stores image *URLs*, never image files. Scryfall's policy:
+<https://scryfall.com/docs/privacy-policy>
+
+**2. The card database update check, from GitHub.** Foilio asks a small file on
+`raw.githubusercontent.com` whether a newer card database exists. The request
+carries your IP address and nothing about you or your collection. GitHub's
+privacy statement applies. **A download never starts on its own** — a new card
+database is around 34 MB and always needs a tap.
+
+**3. Ads, from Google AdMob.** Free version only. Covered in its own section
+below.
+
+**4. The purchase, through Google Play.** Only when you tap to buy Foilio Pro or
+to restore a purchase. Google Play handles the entire transaction; Foilio is
+told only whether you own the product. **No payment details ever reach this app**
+— it cannot see your card number, and does not ask for one.
+
+Notably absent: card recognition. The scanner never calls Scryfall or anything
+else. It matches against the database already on the phone.
+
+## Ads (free version only)
+
+The free version of Foilio shows a banner at the top of the screen and, when
+you choose to watch one for ten extra scans, a full-screen ad. Both are served
+by **Google AdMob**. The full-screen ad only ever appears after you tap a
+button asking for it.
+
+To serve an ad, Google may collect and process:
+
+- the device's **advertising ID** (a resettable identifier — Android
+  Settings › Privacy › Ads lets you reset or delete it);
+- **device and app information** — model, operating system version, app
+  version, language, coarse region;
+- your **IP address**, from which Google infers approximate location;
+- **ad interactions** — which ads were shown, viewed or tapped.
+
+Google uses this to select ads, to measure them, and to prevent fraud.
+Depending on your consent and your region, it may be used for personalised
+advertising. We do not receive any of it, and we do not send Google anything
+about your collection — Foilio does not have a user identifier to send.
+
+- Google's advertising policy: <https://policies.google.com/technologies/ads>
+- How Google uses data from partner sites and apps:
+  <https://policies.google.com/technologies/partner-sites>
+
+**Consent.** In the EEA, the UK and Switzerland, Foilio shows Google's own
+consent form before requesting its first ad, and your answer is stored on the
+device. You can change it at any time: **Settings › Ad privacy options**. Where
+that row is not shown, it is because the consent framework reports that no
+consent is required in your region.
+
+**Turning ads off entirely.** Buy Foilio Pro. With Pro, no ad is ever
+requested, the ad SDK makes no ad calls, and the banner is removed from the
+layout rather than left blank.
+
+## Foilio Pro, and purchases
+
+Foilio Pro is a **one-time purchase** (product id `foilio_pro_unlock`), not a
+subscription. It removes the free plan's limits and all ads.
+
+The purchase is processed by Google Play Billing. Google receives and handles
+everything about the payment; Foilio receives a yes or no and remembers it on
+the device. Google Play's terms and privacy policy govern the transaction, the
+receipt and any refund: <https://policies.google.com/privacy>
+
+Because the entitlement is remembered on the device and there is no account,
+**"Restore purchase" on the Foilio Pro screen** is how a reinstall or a new
+phone gets the unlock back. It asks Google Play what your Play account already
+owns. It never charges again.
+
+## Backups and exports, which are yours to place
+
+Foilio can export your whole collection as a single file, and can import one
+back. Both are entirely under your control:
+
+- an **export** is handed to Android's share sheet. Where it goes — Google
+  Drive, email, a messaging app, local storage — is your choice, and Foilio has
+  no visibility into it and does not keep a copy;
+- an **import** comes through Android's file picker, so the app can read only
+  the one file you select.
+
+A backup file contains your collection in plain, readable JSON. It is not
+encrypted. Treat it like any other document: if you would not post it publicly,
+do not put it somewhere public.
+
+Backups do not include the card database (it ships with the app), your
+settings, or the day's scan count.
+
+## Children
+
+Foilio is not directed at children and is rated for a general audience. It does
+not knowingly collect personal information from anyone, of any age. In the Play
+Console it is declared as not primarily child-directed; ad content is requested
+with Google's standard content settings.
+
+## Your rights over data
+
+Because Foilio holds no data about you on any server, the usual requests have
+unusually direct answers:
+
+- **Access or export** — the backup export produces everything the app holds.
+- **Deletion** — uninstalling the app deletes it all. Within the app, any
+  container, deck, card or wish can be deleted individually.
+- **Advertising data** — held by Google, not by us. Reset or delete the
+  advertising ID in Android Settings › Privacy › Ads, change your consent in
+  Foilio's Settings › Ad privacy options, or use Google's own controls at
+  <https://myadcenter.google.com>.
+- **Purchase records** — held by Google Play; managed from your Play account.
+
+There is no request to send us, because there is nothing on our side to act on.
+
+## Card data, and whose it is
+
+Card names, text, images and prices come from **Scryfall**
+(<https://scryfall.com>), used with attribution as their terms require. Prices
+are a dated estimate from a Scryfall bulk dump, not a valuation.
+
+Foilio is unofficial Fan Content permitted under the Fan Content Policy. Not
+approved/endorsed by Wizards. Portions of the materials used are property of
+Wizards of the Coast. ©Wizards of the Coast LLC.
+
+## Changes to this policy
+
+If this policy changes, the date at the top changes with it, and a material
+change will be noted in the app's release notes. The current version is always
+the one published with the app.
+
+## Contact
+
+Questions about this policy or about Foilio:
+
+**leoseverini@gmail.com**
